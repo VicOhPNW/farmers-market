@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
+import WebFont from 'webfontloader';
 
 const render = (Component) => {
   ReactDOM.render(
@@ -13,6 +14,12 @@ const render = (Component) => {
     document.getElementById('react-app-root')
   );
 };
+
+WebFont.load({
+  google: {
+    families: ['Gloria+Hallelujah', 'Shadows+Into+Light']
+  }
+});
 
 render(App);
 
