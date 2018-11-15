@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import ScheduleList from './ScheduleList';
 
 function App(){
   return (
@@ -12,6 +13,7 @@ function App(){
         `}</style>
 
       <Header/>
+      <ScheduleList/>
     </div>
   );
 }
