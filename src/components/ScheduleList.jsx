@@ -1,7 +1,7 @@
 import React from 'react';
 import Schedule from './Schedule';
 
-const masterScheduleList = [
+let masterScheduleList = [
   {
     day: 'Sunday',
     location: 'Lents International',
@@ -44,13 +44,15 @@ function ScheduleList() {
   return (
     <div>
       <hr/>
-      {masterScheduleList.map((schedule, index) =>
-        <Schedule day={schedule.day}
-          location={schedule.location}
-          hours={schedule.hours}
-          booth={schedule.booth}
-          key={index} />
-      )}
+      <div className="row mx-5">
+        {masterScheduleList.map((schedule, index) =>
+          <Schedule day={schedule.day}
+            location={schedule.location}
+            hours={schedule.hours}
+            booth={schedule.booth}
+            key={index} />
+        )} 
+      </div>
     </div>
   );
 }
